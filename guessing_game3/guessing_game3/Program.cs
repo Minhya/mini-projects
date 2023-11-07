@@ -24,7 +24,7 @@ namespace annagissningsspel2
             {
 
 
-                Console.WriteLine("Are you ready to play? Type 'yes' to continue....");
+                Console.WriteLine("Are you ready to play? Type 'yes' to continue....");//new change cuaz im cool
                 string answer_to_play = Console.ReadLine().ToLower();
 
                 int maxAttempts = 3;
