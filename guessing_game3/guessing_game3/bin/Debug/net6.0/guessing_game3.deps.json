@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "guessing_game3/1.0.0": {
+        "runtime": {
+          "guessing_game3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "guessing_game3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
