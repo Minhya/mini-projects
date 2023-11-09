@@ -1,0 +1,14 @@
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\bin\Debug\net6.0\gissningsspel2.0.exe
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\bin\Debug\net6.0\gissningsspel2.0.deps.json
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\bin\Debug\net6.0\gissningsspel2.0.runtimeconfig.json
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\bin\Debug\net6.0\gissningsspel2.0.dll
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\bin\Debug\net6.0\gissningsspel2.0.pdb
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\obj\Debug\net6.0\gissningsspel2.0.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\obj\Debug\net6.0\gissningsspel2.0.AssemblyInfoInputs.cache
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\obj\Debug\net6.0\gissningsspel2.0.AssemblyInfo.cs
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\obj\Debug\net6.0\gissningsspel2.0.csproj.CoreCompileInputs.cache
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\obj\Debug\net6.0\gissningsspel2.0.dll
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\obj\Debug\net6.0\refint\gissningsspel2.0.dll
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\obj\Debug\net6.0\gissningsspel2.0.pdb
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\obj\Debug\net6.0\gissningsspel2.0.genruntimeconfig.cache
+E:\Projects\assignments\gissningsspel2.0\gissningsspel2.0\obj\Debug\net6.0\ref\gissningsspel2.0.dll

@@ -65,8 +65,9 @@ namespace annagissningsspel2
                             Console.WriteLine("Wrong format. Please enter a valid number.");
                         }
                     }
+                    int round_end_attempts = attempts; // BRB               BRB            BRB               BRB                 BRB                 BRB
                     string answer;
-                    if (attempts >= maxAttempts)
+                    if (round_end_attempts >= maxAttempts)
                     {
                         Console.WriteLine("Game over. You lost. The correct number was " + rngnum + ". Type 'yes' to try again.");
                         answer = Console.ReadLine().ToLower();
