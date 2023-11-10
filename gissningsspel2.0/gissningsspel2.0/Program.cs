@@ -83,6 +83,7 @@ namespace annagissningsspel2
                 answer_to_play = Console.ReadLine().ToLower();
                 break;
             }
+            Program.GuessingGame(args);
         }
 
     }
