@@ -1,89 +1,98 @@
 ﻿using System;
 
-namespace annagissningsspel2
+class Program
 {
-    internal class Program
-
+    static void Main()
     {
-        public static void Main(string[] args)
-        {
+        GuessingGame();
+    }
 
-            Program.GuessingGame(args);
-        }
-        static void GuessingGame(string[] args)
-        {
+    static void GuessingGame()
+    {
+        int maxRounds = 5;
+        int currentRound = 0;
+        int? bestRound = null;
+        int bestRoundGuesses = int.MaxValue;
 
-            while (true) // while loop för att loopa hela spelet
+        while (currentRound < maxRounds)
+        {
+            Random random = new Random();
+            int rngNum = random.Next(1, 101);
+            currentRound++;
+
+            Console.WriteLine($"Welcome to Anna's guessing game! Round {currentRound}");
+
+            Console.Write("Are you ready to play? Type 'yes' to continue....");
+            string answerToPlay = Console.ReadLine().ToLower();
+
+            int maxAttempts = 10;
+            int attempts = 0;
+
+            if (answerToPlay == "yes")
             {
-                Random rnd = new Random(); // generar ett slumpmässigt nummer
-                int rngnum = rnd.Next(1, 101); // lägger en gräns så att det är mellan 1 - 100
-
-                Console.WriteLine("Welcome to Anna's guessing game!");
-
-                Console.WriteLine("Are you ready to play? Type 'yes' to continue....");
-                string answer_to_play = Console.ReadLine().ToLower();
-
-                int maxAttempts = 3;
-
-                if (answer_to_play.ToLower() == "yes")
+                while (attempts < maxAttempts)
                 {
-                    int attempts = 0;
+                    Console.Write("Guess a number from 1 to 100: ");
+                    string userGuessStr = Console.ReadLine();
 
-                    while (attempts < maxAttempts)
+                    if (int.TryParse(userGuessStr, out int userGuess) && userGuess >= 1 && userGuess <= 100)
                     {
-                        Console.WriteLine("Guess a number from 1 to 100: ");
-                        int userGuess;
+                        attempts++;
 
-                        if (int.TryParse(Console.ReadLine(), out userGuess))  // TryParse() converts the string data type into int Boolean if its is within the limit. out stores the userguesses
+                        if (userGuess == rngNum)
                         {
-                            if (userGuess < 1 || userGuess > 100)
-                            {
-                                attempts++;
-                            }
-                            else
-                            {
-                                attempts++;
-
-                                if (userGuess == rngnum)
-                                {
-                                    Console.WriteLine("Congratulations! You won the game!");
-                                    break;
-                                }
-                                else if (userGuess < rngnum)
-                                {
-                                    Console.WriteLine("The guess was too low.");
-                                }
-                                else if (userGuess > rngnum)
-                                {
-                                    Console.WriteLine("The guess was too high.");
-                                }
-                            }
-                        }
-                        else
-                        {
-                            attempts++;
-                            Console.WriteLine("Wrong format. Please enter a valid number.");
-                        }
-                    }
-                    int round_end_attempts = attempts; // BRB               BRB            BRB               BRB                 BRB                 BRB
-                    string answer;
-                    if (round_end_attempts >= maxAttempts)
-                    {
-                        Console.WriteLine("Game over. You lost. The correct number was " + rngnum + ". Type 'yes' to try again.");
-                        answer = Console.ReadLine().ToLower();
-                        if (answer != "yes")
-                        {
-                            Console.WriteLine("All done!");
+                            Console.WriteLine("Congratulations! You won the round!");
                             break;
                         }
+                        else if (userGuess < rngNum)
+                        {
+                            Console.WriteLine("The guess was too low.");
+                        }
+                        else if (userGuess > rngNum)
+                        {
+                            Console.WriteLine("The guess was too high.");
+                        }
                     }
-
+                    else
+                    {
+                        attempts++;
+                        Console.WriteLine("Wrong format. Please enter a valid number.");
+                    }
                 }
-                else Console.WriteLine("Bye!");
-                answer_to_play = Console.ReadLine().ToLower();
+
+                if (attempts >= maxAttempts)
+                {
+                    Console.WriteLine($"Round {currentRound} over. You lost. The correct number was {rngNum}.");
+                }
+                else
+                {
+                    Console.WriteLine($"Round {currentRound} over. It took you {attempts} guesses to get it right.");
+
+                    if (attempts < bestRoundGuesses)
+                    {
+                        bestRound = currentRound;
+                        bestRoundGuesses = attempts;
+                    }
+                }
+
+                if (currentRound < maxRounds)
+                {
+                    Console.Write("Do you want to continue to the next round? Type 'yes' to continue, or 'no' to quit: ");
+                    string answer = Console.ReadLine().ToLower();
+                    if (answer != "yes")
+                    {
+                        Console.WriteLine("All done!");
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Bye!");
                 break;
             }
         }
 
+        Console.WriteLine($"\nGame Over!\nYour best round was Round {bestRound} with {bestRoundGuesses} guesses.");
     }
 }
