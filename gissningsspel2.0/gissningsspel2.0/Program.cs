@@ -91,6 +91,7 @@ class Program
                 Console.WriteLine("Bye!");
                 break;
             }
+            Program.GuessingGame(args);
         }
 
         Console.WriteLine($"\nGame Over!\nYour best round was Round {bestRound} with {bestRoundGuesses} guesses.");
