@@ -12,25 +12,27 @@ class Program
         int maxRounds = 5;
         int currentRound = 0;
         int? bestRound = null;
-        int bestRoundGuesses = int.MaxValue;
+        int bestRoundGuesses = 0;
 
-        while (currentRound < maxRounds)
+
+        Console.WriteLine($"Welcome to Anna's guessing game! Round {currentRound}");
+
+        Console.WriteLine("Are you ready to play? Type 'yes' to continue....");
+        string answerToPlay = Console.ReadLine().ToLower();
+
+        do
         {
             Random random = new Random();
             int rngNum = random.Next(1, 101);
             currentRound++;
 
-            Console.WriteLine($"Welcome to Anna's guessing game! Round {currentRound}");
-
-            Console.Write("Are you ready to play? Type 'yes' to continue....");
-            string answerToPlay = Console.ReadLine().ToLower();
 
             int maxAttempts = 10;
             int attempts = 0;
 
             if (answerToPlay == "yes")
             {
-                while (attempts < maxAttempts)
+                do
                 {
                     Console.Write("Guess a number from 1 to 100: ");
                     string userGuessStr = Console.ReadLine();
@@ -38,7 +40,6 @@ class Program
                     if (int.TryParse(userGuessStr, out int userGuess) && userGuess >= 1 && userGuess <= 100)
                     {
                         attempts++;
-
                         if (userGuess == rngNum)
                         {
                             Console.WriteLine("Congratulations! You won the round!");
@@ -58,7 +59,7 @@ class Program
                         attempts++;
                         Console.WriteLine("Wrong format. Please enter a valid number.");
                     }
-                }
+                } while (attempts < maxAttempts);
 
                 if (attempts >= maxAttempts)
                 {
@@ -68,10 +69,12 @@ class Program
                 {
                     Console.WriteLine($"Round {currentRound} over. It took you {attempts} guesses to get it right.");
 
-                    if (attempts < bestRoundGuesses)
+                   
+                    if(bestRoundGuesses < attempts)
                     {
                         bestRound = currentRound;
                         bestRoundGuesses = attempts;
+
                     }
                 }
 
@@ -91,9 +94,14 @@ class Program
                 Console.WriteLine("Bye!");
                 break;
             }
-            Program.GuessingGame(args);
-        }
-
+            
+        } while (currentRound < maxRounds);
+        
+        if (bestRoundGuesses != 0)
+        {
         Console.WriteLine($"\nGame Over!\nYour best round was Round {bestRound} with {bestRoundGuesses} guesses.");
+
+        }else {Console.WriteLine("\nGame Over!\n");}
+
     }
 }
