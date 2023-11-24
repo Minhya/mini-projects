@@ -1,0 +1,14 @@
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\bin\Debug\net6.0\bingowashisnamo.exe
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\bin\Debug\net6.0\bingowashisnamo.deps.json
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\bin\Debug\net6.0\bingowashisnamo.runtimeconfig.json
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\bin\Debug\net6.0\bingowashisnamo.dll
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\bin\Debug\net6.0\bingowashisnamo.pdb
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\obj\Debug\net6.0\bingowashisnamo.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\obj\Debug\net6.0\bingowashisnamo.AssemblyInfoInputs.cache
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\obj\Debug\net6.0\bingowashisnamo.AssemblyInfo.cs
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\obj\Debug\net6.0\bingowashisnamo.csproj.CoreCompileInputs.cache
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\obj\Debug\net6.0\bingowashisnamo.dll
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\obj\Debug\net6.0\refint\bingowashisnamo.dll
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\obj\Debug\net6.0\bingowashisnamo.pdb
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\obj\Debug\net6.0\bingowashisnamo.genruntimeconfig.cache
+E:\Projects\assignments\bingowashisnamo\bingowashisnamo\obj\Debug\net6.0\ref\bingowashisnamo.dll
