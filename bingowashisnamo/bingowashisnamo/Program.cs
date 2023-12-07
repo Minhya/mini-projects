@@ -1,43 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Transactions;
 
 namespace annabingo
 {
     internal class Program
-
     {
         public static void Main(string[] args)
-
         {
-            List<List<int>> bingoTable = new List<List<int>>();
-                List<int> forbiddenNumbers = new List<int>();
+            //generate a random number
+            Random rnd = new Random();
+            //int rndBingoNr = rnd.Next(1, 26);
 
-            for (int i = 0; i < 5; i++) {
-                Random rndBingo = new Random();
-                List<int> bingoTiles = new List<int>();
-                int number;
+            //user enter 10 numbers
+            int[] userNr = new int[10];
+            List<int> rndBingoNr = RandomBingoNumber(10, 1, 25);
+
+           // List<int> rndBingoNr = new List<int>();
+
+            Random random = new Random();
+            List<int> randomBingoNumbers = new List<int>();
 
 
-                for (int j = 0; j < 5; j++)
+            for (int i = 0; i < userNr.Length; i++)
+            {
+                Console.WriteLine("Enter a number" + i + 1 + ": ");
+                if (int.TryParse(Console.ReadLine(), out int enteredNr))
                 {
-                    do
-                    {
-                        number = rndBingo.Next(1, 26);
-                    } while (forbiddenNumbers.Contains(number));
-                    bingoTiles.Add(number);
-                    forbiddenNumbers.Add(number);
-
+                    userNr[i] = enteredNr;
                 }
-
-                bingoTable.Add(bingoTiles);
-            
+                else
+                {
+                    Console.WriteLine("invalid input. Enter a number");
+                    i--;
+                }
             }
-                        
-            foreach (var row in bingoTable)
-            Console.WriteLine($"[{string.Join(",", row)}]");
+
+
+
+            Console.WriteLine("Enter 10 numbers: ");
+            int userNr = Convert.ToInt32(Console.ReadLine());
+
+            if (userNr == rndBingoNr ) 
+            {
+                Console.WriteLine("Congratulations you got bingo!");
+
+            }
+            else
+            {
+                Console.WriteLine("Try again");
+                
+            } 
+            
+            
+
+
+
 
         }
-        
+
     }
 }
 
