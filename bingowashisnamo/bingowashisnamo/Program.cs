@@ -1,67 +1,84 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Transactions;
 
-namespace annabingo
+class Program
 {
-    internal class Program
+    static void Main()
     {
-        public static void Main(string[] args)
+        // Generate an array with 10 random numbers
+        List<List<int>> bingoTable = GenerateBingoTable();
+
+        // Create an array to store user-entered numbers
+        int[] userNumbers = new int[10];
+
+        // Display the generated random numbers
+        Console.WriteLine("I haave generated some random numbers:");
+      
+
+        // Let the user enter their numbers
+        for (int i = 0; i < userNumbers.Length; i++)
         {
-            //generate a random number
-            Random rnd = new Random();
-            //int rndBingoNr = rnd.Next(1, 26);
-
-            //user enter 10 numbers
-            int[] userNr = new int[10];
-            List<int> rndBingoNr = RandomBingoNumber(10, 1, 25);
-
-           // List<int> rndBingoNr = new List<int>();
-
-            Random random = new Random();
-            List<int> randomBingoNumbers = new List<int>();
-
-
-            for (int i = 0; i < userNr.Length; i++)
+            Console.Write($"Enter a number for position {i + 1}: ");
+            if (int.TryParse(Console.ReadLine(), out int enteredNumber))
             {
-                Console.WriteLine("Enter a number" + i + 1 + ": ");
-                if (int.TryParse(Console.ReadLine(), out int enteredNr))
-                {
-                    userNr[i] = enteredNr;
-                }
-                else
-                {
-                    Console.WriteLine("invalid input. Enter a number");
-                    i--;
-                }
-            }
-
-
-
-            Console.WriteLine("Enter 10 numbers: ");
-            int userNr = Convert.ToInt32(Console.ReadLine());
-
-            if (userNr == rndBingoNr ) 
-            {
-                Console.WriteLine("Congratulations you got bingo!");
-
+                userNumbers[i] = enteredNumber;
             }
             else
             {
-                Console.WriteLine("Try again");
-                
-            } 
-            
-            
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+                i--; // Decrement i to repeat the current iteration
+            }
+        }
+
+        // Check if any entered number matches the generated random numbers
+        bool foundBingo = Array.Exists(userNumbers, number => bingoTable.Exists(row => row.Contains(number)));
+
+        // Print "Bingo" if a matching number is found
+        if (foundBingo)
+        {
+            Console.WriteLine("Bingo!");
+        }
+        else
+        {
+            Console.WriteLine("No matching number. Better luck next time!");
+        }
+
+        Console.ReadLine(); // Keep the console window open
+    }
+
+    static List<List<int>> GenerateBingoTable()
+
+    {
+        List<List<int>> bingoTable = new List<List<int>>();
+        List<int> forbiddenNumbers = new List<int>();
+
+        for (int i = 0; i < 5; i++)
+        {
+            Random rndBingo = new Random();
+            List<int> bingoTiles = new List<int>();
+            int number;
 
 
+            for (int j = 0; j < 5; j++)
+            {
+                do
+                {
+                    number = rndBingo.Next(1, 26);
 
+                } while (forbiddenNumbers.Contains(number));
+                bingoTiles.Add(number);
+                forbiddenNumbers.Add(number);
+
+            }
+
+            bingoTable.Add(bingoTiles);
 
         }
 
+        foreach (var row in bingoTable)
+            Console.WriteLine($"[{string.Join(",", row)}]");
+
+        return bingoTable;
+
+
     }
 }
-
-
-
