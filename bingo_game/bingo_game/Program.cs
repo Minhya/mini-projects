@@ -7,7 +7,7 @@ class Program
         // Generate an array with 10 random numbers
         List<List<int>> bingoTable = GenerateBingoTable();
 
-        // Create an array to store user-entered numbers
+        // Create an array to store user-entered numberss
         int[] userNumbers = new int[10];
 
         // Display the generated random numbers
