@@ -1,0 +1,47 @@
+en klass kallad Gissningsspel
+
+ lägger in maxrunda
+ ställer nuvarande runda på 0 för att man börjar på 1
+ ställer in bästa rundan så att den ska förvaras i detta
+ ställer in bästa gissningar
+
+ välkomst text
+ text om att man ska svara för att börja spela
+
+do while 
+{
+om svaret är ja så påbörjar spelet
+
+do while    
+{
+    om spelaren lägger in annat än siffror mellan 1 - 100 förhindrar tryparse att programmet ska krascha. lägger också till försöken då man inte får överskrida max försöken
+
+        om playerns svar matchar med det slumpmässiga talet vinner man
+        om svaret är lägre än det genererade svaret får man upp text att det är för låg
+        om svaret är lägre än det genererade svaret får man upp text att det är för högt
+
+    om det är i fel format får man texten att skriva det i rätt format, läggs till  i försöken
+
+}
+
+om försöken är mer än max försöken förlorar man
+
+    får upp texten att rundan är över och programmet berättar vad det korrekta numret var
+
+        om man har lyckats gissa bättre än rekordet läggs överskrids det föregående
+
+
+Fråga om fortsätta spela kommer upp
+input from playern
+    om annat än ja
+        skriver hej då och bryter prorammet 
+
+} annars, gäller det allra första förfrågan om att påbörja spelet
+    skriver hej då 
+
+om max anatalet rundor är nådd
+    får man game over och visar resultaten för bästa rundan med antalet gissningar
+annars får man bara texten game over
+
+
+

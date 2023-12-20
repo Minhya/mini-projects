@@ -1,0 +1,14 @@
+E:\Projects\mini-projects\bingo\bingo\bin\Debug\net6.0\bingo.exe
+E:\Projects\mini-projects\bingo\bingo\bin\Debug\net6.0\bingo.deps.json
+E:\Projects\mini-projects\bingo\bingo\bin\Debug\net6.0\bingo.runtimeconfig.json
+E:\Projects\mini-projects\bingo\bingo\bin\Debug\net6.0\bingo.dll
+E:\Projects\mini-projects\bingo\bingo\bin\Debug\net6.0\bingo.pdb
+E:\Projects\mini-projects\bingo\bingo\obj\Debug\net6.0\bingo.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\mini-projects\bingo\bingo\obj\Debug\net6.0\bingo.AssemblyInfoInputs.cache
+E:\Projects\mini-projects\bingo\bingo\obj\Debug\net6.0\bingo.AssemblyInfo.cs
+E:\Projects\mini-projects\bingo\bingo\obj\Debug\net6.0\bingo.csproj.CoreCompileInputs.cache
+E:\Projects\mini-projects\bingo\bingo\obj\Debug\net6.0\bingo.dll
+E:\Projects\mini-projects\bingo\bingo\obj\Debug\net6.0\refint\bingo.dll
+E:\Projects\mini-projects\bingo\bingo\obj\Debug\net6.0\bingo.pdb
+E:\Projects\mini-projects\bingo\bingo\obj\Debug\net6.0\bingo.genruntimeconfig.cache
+E:\Projects\mini-projects\bingo\bingo\obj\Debug\net6.0\ref\bingo.dll

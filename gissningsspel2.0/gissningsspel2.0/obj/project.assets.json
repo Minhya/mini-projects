@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\assignments\\gissningsspel2.0\\gissningsspel2.0\\gissningsspel2.0.csproj",
+      "projectUniqueName": "E:\\Projects\\mini-projects\\gissningsspel2.0\\gissningsspel2.0\\gissningsspel2.0.csproj",
       "projectName": "gissningsspel2.0",
-      "projectPath": "E:\\Projects\\assignments\\gissningsspel2.0\\gissningsspel2.0\\gissningsspel2.0.csproj",
+      "projectPath": "E:\\Projects\\mini-projects\\gissningsspel2.0\\gissningsspel2.0\\gissningsspel2.0.csproj",
       "packagesPath": "C:\\Users\\minhy\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\assignments\\gissningsspel2.0\\gissningsspel2.0\\obj\\",
+      "outputPath": "E:\\Projects\\mini-projects\\gissningsspel2.0\\gissningsspel2.0\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\VS Studio cache\\NuGetPackages"
