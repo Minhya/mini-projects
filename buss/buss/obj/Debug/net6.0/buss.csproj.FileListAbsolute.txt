@@ -1,0 +1,14 @@
+E:\Projects\mini-projects\buss\buss\obj\Debug\net6.0\buss.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\mini-projects\buss\buss\obj\Debug\net6.0\buss.AssemblyInfoInputs.cache
+E:\Projects\mini-projects\buss\buss\obj\Debug\net6.0\buss.AssemblyInfo.cs
+E:\Projects\mini-projects\buss\buss\obj\Debug\net6.0\buss.csproj.CoreCompileInputs.cache
+E:\Projects\mini-projects\buss\buss\bin\Debug\net6.0\buss.exe
+E:\Projects\mini-projects\buss\buss\bin\Debug\net6.0\buss.deps.json
+E:\Projects\mini-projects\buss\buss\bin\Debug\net6.0\buss.runtimeconfig.json
+E:\Projects\mini-projects\buss\buss\bin\Debug\net6.0\buss.dll
+E:\Projects\mini-projects\buss\buss\bin\Debug\net6.0\buss.pdb
+E:\Projects\mini-projects\buss\buss\obj\Debug\net6.0\buss.dll
+E:\Projects\mini-projects\buss\buss\obj\Debug\net6.0\refint\buss.dll
+E:\Projects\mini-projects\buss\buss\obj\Debug\net6.0\buss.pdb
+E:\Projects\mini-projects\buss\buss\obj\Debug\net6.0\buss.genruntimeconfig.cache
+E:\Projects\mini-projects\buss\buss\obj\Debug\net6.0\ref\buss.dll
