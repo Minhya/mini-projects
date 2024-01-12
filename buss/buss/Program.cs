@@ -1,12 +1,4 @@
-﻿/* Startkod för att komma igång
- * Observera att båda klasserna är i samma fil för att förenkla.
- * Om programmet blir större är det rekommenderat att ha klasserna i separata filer, som jag förklarar i videon.
- * I så fall kan det vara lämpligt att ställa in startvärden, som jag har gjort.
- * Du kan också skriva ut saker i konsolen i konstruktorn för att se att den "vaknar".
- * Denna kod är mest användbar om du siktar på betygen E och C.
- * För högre betyg krävs mer självständigt arbete.
- */
-using System;
+﻿using System;
 
 // Nedan är namnet på "namespace" - projektet.
 // Skapa ett nytt konsollprojekt med namnet "Bussen" så kan du kopiera all kod direkt från denna fil
@@ -29,7 +21,7 @@ namespace Bussen
 
     class Bus
     {
-        public Passenger[] passengers = new Passenger[25]; //array/vector
+        public Passenger[] passengers = new Passenger[25]; //array/vector, max 25 passagerare
         public int passengerCount = 0;
 
   
