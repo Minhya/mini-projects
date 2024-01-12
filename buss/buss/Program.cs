@@ -29,7 +29,7 @@ namespace Bussen
 
     class Bus
     {
-        public Passenger[] passengers = new Passenger[5];
+        public Passenger[] passengers = new Passenger[25]; //array/vector
         public int passengerCount = 0;
 
   
@@ -38,7 +38,7 @@ namespace Bussen
         {
             Console.WriteLine("Välkommen till fantastiska Buss-simulatorn");
 
-            while (true) //skapar menyn för koden, varje case är kopplade till metoder förutom case 4 som avbryter programmet och default som säger till användaren att mata in rätt.
+            while (true) //skapar menyn för koden, varje case är kopplade till metoder förutom case 4 som avbryter programmet och default som säger till användaren att mata in rätt i format.
             {
                 Console.WriteLine("Välj ett alternativ");
                 Console.WriteLine("1. Lägg till en passagerare");
@@ -47,7 +47,7 @@ namespace Bussen
                 Console.WriteLine("4. Avsluta");
 
                 int temp;
-                if (int.TryParse(Console.ReadLine(), out temp))
+                if (int.TryParse(Console.ReadLine(), out temp)) 
                 {
                     // Menyn för att utföra åtgärder ska vara här
                     switch (temp)
@@ -58,15 +58,15 @@ namespace Bussen
                             AddPassenger(age);
                             break;
                         case 2:
-                            PrintPassengerNumber(); // alla passagerare
+                            PrintPassengerNumber(); // det totala passagerarnumret
                             break;
                         case 3:
                             int totalAge = CalculateTotalAge();
                             Console.WriteLine($"Total ålder av passagerare: {totalAge}");
                             break;
                         case 4:
-                            Console.WriteLine("Avslutar programmet. Adjö!");
-                            return;
+                            Console.WriteLine("Avslutar programmet. Hej då!");
+                            return; //return istället för break för att avsluta programmet.
                         default:
                             Console.WriteLine("Felaktig inmatning");
                             break;
