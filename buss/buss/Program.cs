@@ -1,14 +1,8 @@
 ﻿using System;
 
-// Nedan är namnet på "namespace" - projektet.
-// Skapa ett nytt konsollprojekt med namnet "Bussen" så kan du kopiera all kod direkt från denna fil
 namespace Bussen
 {
-    /* Börja längst ner i dokumentet och klassen "Program".
-     * Denna klass är liten och har uppgiften att starta programmet genom att skapa en buss och sedan anropa Run() metoden.
-     * Projektbeskrivningen betonar vikten av att koda stegvis. I det här fallet kanske du bara behöver skriva ut
-     * något text i Run() metoden.
-     */
+   
     class Passenger
     {
         public int Age { get; set; }
