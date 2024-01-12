@@ -2,45 +2,45 @@
 
 class Program
 {
-    //class/metod to convert fah to celcius
+    
     static decimal ConvertFahrenheitToCelsius(int fahrenheit)
     {
-        decimal celsius = (decimal)((fahrenheit - 32) * 5.0 / 9.0);
+        decimal celsius = (decimal)((fahrenheit - 32) * 5.0 / 9.0); //för att räkna ut fah till cel.
         return celsius;
 
     }
 
     static void Main()
     {
-        decimal celsiusTemp = 0;
+        decimal celsiusTemp = 0; //initiera 0.
 
         do 
         {
-            Console.WriteLine("Enter temp in fahr forthe sauna the number must be between 82 and 87: ");
-            string fahrenheitInput = Console.ReadLine();
+            Console.WriteLine("Mata in temperaturen i fahrenheit, temperaturen måste ligga mellan 82 - 87 °C grader: ");
+            string fahrenheitInput = Console.ReadLine(); //användarens svar ska in hit.
 
-            if (int.TryParse(fahrenheitInput, out int fahrenheit))
+            if (int.TryParse(fahrenheitInput, out int fahrenheit)) //try parse för att inte krascha programmet.
             {
 
                 celsiusTemp = ConvertFahrenheitToCelsius(fahrenheit);
 
-                if (celsiusTemp < 82)
+                if (celsiusTemp < 82) //if statement för vad som ska hända ifall värdet som anges är lägre eller högre än det idealla temperaturen.
                 {
-                    Console.WriteLine("It's too cold.");
+                    Console.WriteLine("Det är för kallt.");
                 }
                 else if (celsiusTemp > 87)
                 {
-                    Console.WriteLine("It is too hot.");
+                    Console.WriteLine("Det är för varmt.");
                 }
-                else
+                else//detta händer om inmatningen är mellan 82 - 87. Dvs om de andra if/elif statement inte stämmer.
                 {
-                    Console.WriteLine($"The temperature of {celsiusTemp}°C degrees are good.");
+                    Console.WriteLine($"Temperaturen på {celsiusTemp}°C grader är lagom.");
                 }
 
             }
             else
             {
-                Console.WriteLine("Please enter a valid number.");
+                Console.WriteLine("Vänligen ange ett nummer."); //om inmatningen är ogiltig, t.ex om det är en bokstav kommer detta upp.
             }
 
         }while (celsiusTemp < 82 || celsiusTemp > 87);
