@@ -3,7 +3,7 @@
 class Program
 {
     
-    static decimal ConvertFahrenheitToCelsius(int fahrenheit)
+    static decimal ConvertFahrenheitToCelsius(int fahrenheit)//metod för att konvertera Fahr till cels.
     {
         decimal celsius = (decimal)((fahrenheit - 32) * 5.0 / 9.0); //för att räkna ut fah till cel.
         return celsius;
