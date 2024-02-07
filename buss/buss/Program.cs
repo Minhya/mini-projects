@@ -5,17 +5,17 @@ namespace Bussen
    
     class Passenger
     {
-        public int Age { get; set; }
+        public int age { get; set; } //behöver inte ens get set
 
-        public Passenger(int age)
+        public Passenger(int age) //konstruerar passenger-objektet med en viss ålder.
         {
-            Age = age;
+            this.age = age; //this.age den här klassens age sätter jag till det användaren ger mig i olika metoder.
         }
     }
 
     class Bus
     {
-        public Passenger[] passengers = new Passenger[25]; //array/vector, max 25 passagerare
+        public Passenger[] passengers = new Passenger[25]; //array/vector, max 25 passagerare/objekt passengers är en lista av klassen passenger
         public int passengerCount = 0;
 
   
@@ -32,31 +32,39 @@ namespace Bussen
                 Console.WriteLine("3. Beräkna total ålder");
                 Console.WriteLine("4. Avsluta");
 
-                int temp;
-                if (int.TryParse(Console.ReadLine(), out temp)) 
+                int input;
+                if (int.TryParse(Console.ReadLine(), out input)) 
                 {
-                    // Menyn för att utföra åtgärder ska vara här
-                    switch (temp)
+                    // Menyn för att utföra åtgärder ska vara här, switch på variabeln är 1 ska den göra...
+                    switch (input)
                     {
+                        
                         case 1:
                             Console.WriteLine("Passagerare tillagd. Ange passagerarens ålder:");
-                            int age = int.Parse(Console.ReadLine());
-                            AddPassenger(age);
-                            break;
+                            try //Trycatch ifall användaren inte skriver in siffror för att lägga in ålder.
+                            {
+                                int age = int.Parse(Console.ReadLine()); //parse till integer
+                                AddPassenger(age); //med argumentet ålder
+                            }
+                            catch (FormatException) //det som blev fel aktiverar detta, formatet specifikt
+                            {
+                                Console.WriteLine("Felaktigt format för ålder. Ange nummer för ålder..");
+                            }
+                            break; //gå ur switch, till menyn. för att köra om programmet.
                         case 2:
                             PrintPassengerNumber(); // det totala passagerarnumret
                             break;
                         case 3:
-                            int totalAge = CalculateTotalAge();
-                            Console.WriteLine($"Total ålder av passagerare: {totalAge}");
+                            int totalage = CalculateTotalage();
+                            Console.WriteLine($"Total ålder av passagerare: {totalage}");
                             break;
                         case 4:
                             Console.WriteLine("Avslutar programmet. Hej då!");
-                            return; //return istället för break för att avsluta programmet.
+                            return; //return istället för break för att avsluta programmet. return ut från metoden run
                         default:
                             Console.WriteLine("Felaktig inmatning");
                             break;
-                    }
+                    } 
                 }
                 else
                 {
@@ -74,34 +82,34 @@ namespace Bussen
             if (passengerCount < passengers.Length)
             {
                 passengers[passengerCount] = new Passenger(age);
-                passengerCount++;
+                passengerCount++; //position
                 Console.WriteLine("Passagerare tillagd i bussen.");
             }
             else
             {
-                Console.WriteLine("Bussen är full.");
+                Console.WriteLine("OBS. Bussen var visst full.");
             }
         }
 
         public void PrintPassengerNumber()
         {
-            Console.WriteLine("Passagerares åldrar på bussen");
-            for (int i = 0; i < passengerCount; i++)
+            Console.WriteLine("Passagerares åldrar på bussen är: ");
+            for (int i = 0; i < passengerCount; i++) //börjar, tills passengerCount, 1 steg
             {
-                Console.WriteLine($"Passagerare {i + 1}: Ålder {passengers[i].Age}");
+                Console.WriteLine($"Passagerare {i + 1}: Ålder {passengers[i].age}"); //gjort om 0 position till 1 -talar positionen. i är positionen i vektorn
             }
             // Skriv ut alla värden från vektorn. Med andra ord, skriv ut alla passagerare
         }
 
-        public int CalculateTotalAge()
+        public int CalculateTotalage() //int istället för void. returnerar en int som är totalage.
         {
-            int totalAge = 0;
-            for (int i = 0; i < passengerCount; i++)
+            int totalage = 0; //börjar på 0
+            for (int i = 0; i < passengerCount; i++) //börjar, tills passengerCount, 1 steg
             {
-                totalAge += passengers[i].Age;
+                totalage += passengers[i].age; //totalage = totalage + passenger[i].age; varje steg i vektorn plus totalage som är 0
             }
             // Beräkna den totala åldern.
-            return totalAge; 
+            return totalage; 
         }
     }
 
